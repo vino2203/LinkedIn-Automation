@@ -1,0 +1,14 @@
+# Strict designation list. Anything not here -> Gate 1 (ask user). status: approved | pending | rejected
+roles:
+  - {title: "GenAI Engineer",                 tier: primary,   status: pending}
+  - {title: "LLM Application Engineer",       tier: primary,   status: pending}
+  - {title: "AI Agent Developer",             tier: primary,   status: pending}
+  - {title: "RAG Engineer",                   tier: primary,   status: pending}
+  - {title: "LLM Evaluation Engineer",        tier: secondary, status: pending}
+  - {title: "AI QA Engineer",                 tier: secondary, status: pending}
+  - {title: "AI Test Automation Engineer",    tier: secondary, status: pending}
+  - {title: "SDET (AI/ML products)",          tier: secondary, status: pending}
+  - {title: "Prompt Engineer",                tier: stretch,   status: pending}
+  - {title: "AI Automation Engineer",         tier: stretch,   status: pending}
+exclude_titles: ["Data Scientist", "ML Engineer", "Manual Tester", "Intern", "Fresher"]
+seniority: ["Senior", "Lead", "Mid"]

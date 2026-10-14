@@ -1,0 +1,13 @@
+min_match_score: 90          # percent; below this -> never queued
+max_applications_per_day: 15 # TODO user to confirm (15-25 suggested)
+locations: ["Chennai", "Remote"]   # TODO confirm hybrid/onsite/relocation
+notice_period: null          # TODO
+current_ctc: null            # TODO
+expected_ctc: null           # TODO
+experience_years: 8
+company_blocklist: []
+company_preference: []
+timezone: "Asia/Kolkata"
+approval_channel: telegram   # via Hermes
+approval_expiry_hours: 24
+mode: manual                 # manual = approve every job; auto = auto-apply approved designations >= score (enable after 2 weeks)

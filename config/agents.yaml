@@ -1,0 +1,8 @@
+# model per agent (cheap for search/score, strong for tailor/apply/write)
+j1_j4_discovery: {model: claude-haiku-5-5}
+matcher_scorer:  {model: claude-haiku-5-5}
+tailor:          {model: claude-sonnet-5-5}
+applier:         {model: claude-sonnet-5-5}
+gmail_agent:     {model: claude-haiku-5-5}
+a1_github_analyst: {model: claude-sonnet-5-5}
+a2_writer_demo_maker: {model: claude-sonnet-5-5}
