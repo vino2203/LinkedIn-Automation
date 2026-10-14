@@ -1,0 +1,13 @@
+# copy to config/contact.local.yaml (git-ignored) and fill in; used ONLY for form filling
+full_name: ""
+first_name: ""
+last_name: ""
+email: ""
+phone: ""
+city: "Chennai"
+experience_years: 8
+current_ctc: ""
+expected_ctc: ""
+notice_period: ""
+linkedin_url: ""
+github_url: "https://github.com/vino2203"
