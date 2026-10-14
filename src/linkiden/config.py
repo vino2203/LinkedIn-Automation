@@ -7,7 +7,7 @@ import yaml
 from dotenv import dotenv_values
 
 ROOT = Path(__file__).resolve().parents[2]
-REQUIRED_SECRETS = ["ANTHROPIC_API_KEY", "COMPOSIO_API_KEY", "GITHUB_TOKEN", "TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID"]
+REQUIRED_SECRETS = ["COMPOSIO_API_KEY", "GITHUB_TOKEN", "TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID"]
 
 
 @dataclass

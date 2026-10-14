@@ -3,13 +3,13 @@ Usage: python -m linkiden.run_daily [--dry-run]"""
 from __future__ import annotations
 import argparse
 import yaml
-from anthropic import Anthropic
 from .config import ROOT, load_settings
 from .db import DB
 from .gate import TelegramGate, job_card
 from .pipeline import triage, apply_db_approvals, set_designation
 from .roles import role_status
 from .scorer import LLMScorer
+from .llm import make_llm, _ClientAdapter
 from .discovery import naukri
 
 
@@ -44,7 +44,7 @@ def main():
     db = DB(ROOT / "data" / "jobs.db")
     apply_db_approvals(s, db)
     models = yaml.safe_load((ROOT / "config" / "agents.yaml").read_text())
-    scorer = LLMScorer(Anthropic(api_key=s.secret("ANTHROPIC_API_KEY")), models["matcher_scorer"]["model"], ROOT)
+    scorer = LLMScorer(_ClientAdapter(make_llm(s.secrets, models["matcher_scorer"]["model"])), models["matcher_scorer"]["model"], ROOT)
     roles = [r["title"] for r in s.roles["roles"] if r["status"] != "rejected"]
     jobs = naukri.discover(roles, [l for l in s.prefs["locations"] if l.lower() != "remote"])
     new = []
